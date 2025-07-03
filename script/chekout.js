@@ -112,6 +112,7 @@ form.addEventListener('submit', async (event) =>{
           alert('Giỏ hàng trống. Vui lòng thêm sản phẩm trước khi đặt hàng!');
           return;
         }
+        const fullName = `${firstname} ${lastname}`.trim();
         const orderedProducts = cart.map(item => ({
           name: item.name,
           quantity: item.quantity,
@@ -119,8 +120,7 @@ form.addEventListener('submit', async (event) =>{
         }));
         // Tạo nội dung gửi đi
         const formData = {
-          firstname,
-          lastname,
+          name: fullName,
           email,
           phone,
           address,
@@ -128,7 +128,10 @@ form.addEventListener('submit', async (event) =>{
           state,
           zipcode,
           country,
-          products: orderedProducts.map(p => `${p.name} (x${p.quantity}) - ${p.price} VNĐ`).join('\n')
+          products: orderedProducts.map(p => {
+            const total = p.price * p.quantity;
+            return `-Sản Phẩm: ${p.name} (Số Sản Phẩm: x${p.quantity}) - Đơn giá 1 sản phẩm: ${p.price} VNĐ${p.quantity > 1 ? ` - Tổng: ${total} VNĐ` : ''}`;
+          }).join('\n\n')
         };
         // Gửi dữ liệu qua Formspree
         try {
@@ -143,8 +146,7 @@ form.addEventListener('submit', async (event) =>{
           if (response.ok) {
             // Lưu thông tin vào sessionStorage để trang xác nhận lấy lại
             const user = {
-              firstname,
-              lastname,
+              name: fullName,
               email,
               phone,
               address,
