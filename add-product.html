@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add product page</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style/header-footer.css">
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/add-product.css">
+  <title>add products</title>
+</head>
+
+<body>
+  <div class="pop-up js-pop-up">
+    <p>Are you sure you want to delete?</p>
+    <button class="cancel-btn">Cancel</button>
+    <button class="popup-delete-btn">Delete</button>
+  </div>
+  <div id="toast" class="toast">Product added to cart!</div>
+  <header id="header-placeholder">
+
+  </header>
+  <div>
+    <div class="add-product-container js-add-product-container">
+      <form id="add-product-form" class=" add-product-form">
+        <h2>Add New Product</h2>
+
+        <label for="id">Product ID</label>
+        <input type="text" id="id" required placeholder="e.g. sassafras-floral-casual-shirt">
+
+        <label for="fileImage">Image Path (relative)</label>
+        <input type="file" id="fileImage" accept="image/*"
+          placeholder="e.g. images/products/sassafras-floral-casual-shirt.png" required>
+
+        <label for="name">Product Name</label>
+        <input type="text" id="name" required placeholder="e.g. Sassafras women's floral print casual shirt">
+
+        <label for="description">Description</label>
+        <textarea id="description" rows="3" required
+          placeholder="e.g. Casual floral print shirt offering a blend of comfort and style for everyday wear."></textarea>
+
+        <label for="priceCents">Price (in cents)</label>
+        <input type="number" id="priceCents" required placeholder="e.g. 28700">
+
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">-- Select Category --</option>
+          <option>Men's Clothing</option>
+          <option>Women's Clothing</option>
+          <option>Electronics</option>
+          <option>Home & Kitchen</option>
+          <option>Books</option>
+          <option>Beauty</option>
+        </select>
+
+        <button type="submit">Add Product</button>
+      </form>
+
+      <div class="container-for-all">
+        <h3 style="text-align: center;margin-top: 1rem;">All Products</h3>
+        <div class="js-all-product-details-container all-product-details-container">
+
+        </div>
+      </div>
+
+    </div>
+    <footer id="footer-placeholder" class="footer-section">
+
+    </footer>
+    <script src="script/shared/include.js" type="module"></script>
+    <script src="script/add-product.js" type="module"> </script>
+</body>
+
+</html>

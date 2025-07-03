@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cart-item-list</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style/header-footer.css">
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/cart-item-list.css">
+
+</head>
+<body>
+  <header id="header-placeholder">
+
+  </header>
+  <h1 class="heading">Your Cart</h1>
+  <main class="container js-container">
+    <div class="cart-container">
+      <div>
+        <div class="cart-items-list js-cart-items-list">
+        </div>
+      </div>
+
+      <div class="cart-order-summary">
+        <div class="cart-order-summary-details">
+          <div class="order-summary-heading">Order Summary</div>
+          <div class="grid-order-summary-details">
+            <p class="grid-order-summary-details-text-format">Subtotal</p>
+            <p class="js-subtotal-price">$0</p>
+          </div>
+          <div class="grid-order-summary-details">
+            <p class="grid-order-summary-details-text-format">Shipping</p>
+            <p>Free</p>
+          </div>
+          <div class="grid-order-summary-details">
+            <p class="grid-order-summary-details-text-format">Tax</p>
+            <p class="js-add-tax">$0</p>
+          </div>
+        </div>
+
+        <div class="total-order-summary-container">
+          <div class="grid-total-order-summary">
+            <p>Total</p>
+            <p class="js-total-price">$0</p>
+          </div>
+        </div>
+        <div class="order-checkout">
+          <a href="checkout.html"><button class="checkout-btn">Checkout &rightarrow;</button></a>
+
+          <button class="continue-shopping-btn"><a href="index.html">Continue Shopping</a></button>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <footer class="footer-section" id="footer-placeholder">
+
+  </footer>
+
+</body>
+<script src="script/shared/include.js" type="module"></script>
+<script src="script/cart-item-list.js" type="module"></script>
+
+</html>

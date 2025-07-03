@@ -1,0 +1,52 @@
+ #admin-login-form {
+   margin-top: 6rem;
+   background: transparent;
+   padding: 2rem;
+   border-radius: 10px;
+   max-width: 500px;
+   border: 1px solid rgba(139, 158, 184, 0.4);
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+ #admin-login-form input,
+ #admin-login-form button {
+   width: 100%;
+   background: transparent;
+   margin-top: 0.4rem;
+   padding: 0.7rem;
+   font-size: 1rem;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+ }
+
+ #admin-login-form label {
+   display: inline-block;
+   margin: 0.5rem;
+ }
+
+ #admin-login-form button {
+   background-color: #2d7ff9;
+   color: white;
+   font-weight: bold;
+   cursor: pointer;
+ }
+
+ #admin-login-form h2 {
+   text-align: center;
+ }
+
+ .admin-login-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ select option {
+   background: #020816;
+ }
+
+ @media (max-width: 700px) {
+   #admin-login-form {
+     margin: 8rem 0.4rem 0.4rem 0.4rem;
+   }
+ }

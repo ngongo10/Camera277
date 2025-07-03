@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>admin login</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style/header-footer.css">
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/admin.css">
+  <title>add products</title>
+</head>
+
+<body>
+  <header id="header-placeholder">
+
+  </header>
+  <div class="admin-login-container">
+    <form id="admin-login-form">
+      <h2>Admin Login</h2>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" required>
+
+
+      <label for="image">Password</label>
+      <input type="password" id="password" required>
+      <div class="error-message" id="error"></div>
+
+      <button type="submit">Add Product</button>
+    </form>
+  </div>
+  <footer id="footer-placeholder" class="footer-section">
+
+  </footer>
+  <script src="script/shared/include.js" type="module"></script>
+
+  <script>
+
+
+    document.getElementById('admin-login-form')
+      .addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('error').innerHTML = '';
+        const email = document.getElementById('email').value.trim().toLowerCase();
+        const password = document.getElementById('password').value.trim();
+
+        const admin = JSON.parse(localStorage.getItem('admin'));
+
+        if (!admin) {
+          document.getElementById('error').innerHTML = 'Admin account not found.';
+          return;
+        }
+
+
+        if (admin && admin.email.toLowerCase() === email && admin.password === password) {
+          document.getElementById('error').innerHTML = 'Successfully logged in. Redirecting...';
+          const errorBox = document.getElementById('error');
+          errorBox.style.color = 'green';
+          errorBox.style.margin = '0.7rem 0';
+          errorBox.style.width = '100%';
+          errorBox.style.textAlign = 'center';
+
+          console.log("Login success!");
+
+          setTimeout(() => {
+            window.location.href = 'add-product.html';
+          }, 2000); // 2 seconds
+
+        } else {
+          document.getElementById('error').innerHTML = 'Invalid Inputs';
+          document.getElementById('error').style.color = 'red';
+        }
+        document.getElementById('admin-login-form').reset();
+      })
+  </script>
+</body>
+
+</html>

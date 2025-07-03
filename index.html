@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ModernShop</title>
+  <link rel="stylesheet" href="style/product.css">
+  <link rel="stylesheet" href="style/header-footer.css">
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/home.css">
+
+
+
+</head>
+
+<body>
+  <div id="toast-container" class="toast-container"></div>
+
+  <div id="login-popup" class="popup-overlay">
+    <div class="popup-box">
+      <p style="color: rgb(15, 13, 48);">Please log in to add items to your cart.</p>
+      <button
+        style="color: rgb(14, 7, 39);background-color: rgb(220, 214, 214);padding: 8px 15px; border: none;border-radius: 5px;margin-top: 0.5rem;"
+        onclick="
+     document.getElementById('login-popup').style.display = 'none';
+    ">Close</button>
+    </div>
+  </div>
+
+  <header id="header-placeholder">
+
+  </header>
+
+
+  <section class="front-page-img">
+    <div class="front-page-img-sec">
+      <div class="summer-collection">
+        <h1>Summer Collection 2025</h1>
+        <p>Discover our latest products with exceptional design and quality. Perfect for<br> your modern lifestyle.</p>
+        <button class="shop-now-btn">Shop Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="products-header">
+      <div class="products-left-header">
+        <h1>Featured Products</h1>
+      </div>
+      <div class="products-right-header js-products-right-header">
+        <button class="product-btn active" data-category="all">All</button>
+        <button class="product-btn" data-category="Sports">Sports</button>
+        <button class="product-btn" data-category="Men's Clothing">Men's Clothing</button>
+        <button class="product-btn" data-category="Women's Clothing">Women's Clothing</button>
+        <button class="product-btn" data-category="Kitchen">Kitchen</button>
+        <button class="product-btn" data-category="jewelery">Jewelery</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="display: flex;align-items: center;justify-content: center;">
+    <div class="product-item-grid js-product-item-grid">
+
+
+
+
+    </div>
+  </section>
+
+  <footer class="footer-section" id="footer-placeholder">
+
+  </footer>
+  <script src="script/shared/include.js" type="module"></script>
+  <script src="script/home.js" type="module"></script>
+
+</body>
+
+
+</html>

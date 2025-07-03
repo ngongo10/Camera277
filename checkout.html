@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/header-footer.css">
+  <link rel="stylesheet" href="style/checkout.css">
+
+</head>
+
+<body>
+  <div class="loader-overlay" id="loader">
+    <div class="spinner"></div>
+  </div>
+
+
+  <header id="header-placeholder">
+
+  </header>
+  <h1 class="checkout-heading">Checkout</h1>
+  <main class="checkout-container">
+
+    <div class="checkout-form">
+      <p class="contact-information">Contact Information</p>
+      <form action="">
+        <div class="form-flex-it">
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname" autocomplete="given-name">
+            <small class="error-message" id="firstname-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname" autocomplete="given-family">
+            <small class="error-message" id="lastname-error"></small>
+          </div>
+        </div>
+
+        <div class="form-flex-it">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" autocomplete="email">
+            <small class="error-message" id="email-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="phonenumber">Phone Number</label>
+            <input type="text" name="phonenumber" id="phonenumber" autocomplete="tel">
+            <small class="error-message" id="phonenumber-error"></small>
+          </div>
+        </div>
+
+        <div class="shipping-address-heading">Shipping Address</div>
+
+        <div class="shipping-address form-group">
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address" autocomplete="address-line1">
+          <small class="error-message" id="address-error"></small>
+
+        </div>
+
+        <div class="shipping-address-two">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" autocomplete="address-level2">
+            <small class="error-message" id="city-error"></small>
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" name="state" id="state" autocomplete="address-level1">
+            <small class="error-message" id="state-error"></small>
+          </div>
+          <div class="form-group">
+            <label for="zipcode">ZIP code</label>
+            <input type="text" name="zipcode" id="zipcode" autocomplete="postal-code">
+            <small class="error-message" id="zipcode-error"></small>
+          </div>
+        </div>
+
+        <div class="shipping-address-country form-group">
+          <label for="country">Country</label>
+          <input type="text" name="country" id="country" autocomplete="country">
+          <small class="error-message" id="country-error"></small>
+
+        </div>
+
+        <div class="place-order">
+          <button type="submit" class="place-order-button js-place-order-button">
+            Place Order
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="order-summary">
+      <p class="order-summary-heading">Order Summary</p>
+      <div class="product-list">
+        <div class="js-order-summary-products">
+
+
+
+        </div>
+      </div>
+      <div class="summary-section-container js-summary-section-container">
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer-section" id="footer-placeholder">
+
+  </footer>
+  <script src="script/shared/include.js" type="module"></script>
+  <script src="script/chekout.js" type="module"></script>
+</body>
+
+</html>

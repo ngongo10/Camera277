@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/header-footer.css">
+  <link rel="stylesheet" href="style/signup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Signup page</title>
+</head>
+
+<body>
+  <header id="header-placeholder">
+
+  </header>
+  <div class="signup-form">
+    <div class="signup-form-2">
+      <form>
+        <h2>Signup form</h2>
+
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required autocomplete="username">
+        <small id="username-error" class="error-message"></small>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <small id="email-error" class="error-message"></small>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required autocomplete="new-password">
+        <small id="password-error" class="error-message"></small>
+        <label for="confirm">Confirm Password</label>
+        <input type="password" name="confirm" id="confirm" required autocomplete="new-password">
+
+        <small id="confirm-error" class="error-message"></small>
+        <button type="submit">Signup</button>
+        <p style="text-align:center;">Already have an account? <a href="login.html">Login</a></p>
+
+        <div class="message" id="message">
+
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+
+  <footer id="footer-placeholder" class="footer-section">
+
+  </footer>
+  <script src="script/signup.js"> </script>
+  <script src="script/shared/include.js" type="module"></script>
+</body>
+
+</html>

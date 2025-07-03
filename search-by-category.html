@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>search-by-category</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/header-footer.css">
+  <link rel="stylesheet" href="style/product.css">
+
+  <style>
+    .js-search-by-category {
+      display: grid;
+      margin: 4rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    
+
+    .search-input {
+      margin-top: 5.2rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-input input {
+      background-color: transparent;
+      padding: 12px 10px;
+      border-radius: 5px;
+      border: 1px solid rgba(139, 158, 184, 0.2);
+      width: 40%;
+      margin: 0.7rem;
+    }
+
+    .search-input button {
+      padding: 12px 30px;
+      background-color: rgba(44, 103, 175, 0.8);
+      border: none;
+      border-radius: 5px;
+
+    }
+    .result-details{
+      margin: 1rem 4.8rem 0 4.8rem ;
+    }
+    .result-details h1{
+      margin-bottom: 1rem;
+    }
+    .result-details h1 span{
+      color: rgb(43, 87, 198);
+    }
+    .result-details p, p span{
+      color: rgba(139, 158, 184, 0.9);
+    }
+
+@media(max-width: 1200px) {
+      .js-search-by-category {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        margin: 1rem;
+      }
+    }
+
+    @media (max-width: 908px) {
+      .js-search-by-category {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+
+      .js-search-by-category {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+
+
+
+  </style>
+</head>
+
+<body>
+    <div id="toast-container" class="toast-container"></div>
+
+  <div id="login-popup" class="popup-overlay">
+    <div class="popup-box">
+      <p style="color: rgb(15, 13, 48);">Please log in to add items to your cart.</p>
+      <button
+        style="color: rgb(14, 7, 39);background-color: rgb(220, 214, 214);padding: 8px 15px; border: none;border-radius: 5px;margin-top: 0.5rem;"
+        onclick="
+     document.getElementById('login-popup').style.display = 'none';
+    ">Close</button>
+    </div>
+  </div>
+  <header id="header-placeholder">
+
+  </header>
+
+  <section class="search-input">
+    <input type="text" placeholder="Search Products...">
+    <button class="js-search-icon">
+      <i class="fa fa-search">&nbsp;&nbsp;&nbsp;&nbsp;</i>Search
+    </button>
+  </section>
+
+  <section class="result-details">
+    <h1>Search Results for "<span class="js-product-category-name"></span>"</h1>
+    <p>Found <span class="js-result-quantity"></span> results</p>
+  </section>
+
+  <section class="js-search-by-category">
+
+  </section>
+  <footer class="footer-section" id="footer-placeholder">
+
+  </footer>
+  <script src="script/shared/include.js" type="module"></script>
+  <script src="script/search-by-category.js" type="module"></script>
+</body>
+
+</html>
